@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        let obj = [{ humidity: 20, speed: 30 }, { humidity: 10, speed: 40 }];
+        // let obj = [{ color: "red", flower:"rose",plant:'Shrub' }, { color: "red", flower:"jinnia",plant:'shrub' }];
+        window.onload = function () {
+            let myDiv = $('<div id = "myDiv"></div>')
+            $('body').append(myDiv)
+            let mySelect = $('<select name="mySelect" multiple></select>')
+            myDiv.append(mySelect)
+            for(let key in obj[0]){
+                mySelect.append($('<option value= "'+key+'">'+key+'</option>'))
+            }
+            myDiv.append($('<button onclick="mySubmit()">Submit</button>'))
+        }
+
+        function mySubmit() {
+            let button = $('button')
+            let selection = getValues();
+            $('#labelsDiv').remove()
+            let labelsDiv = $('<div id="labelsDiv"></div>')
+            button.after(labelsDiv)
+
+            for(let item of obj) {
+                for(let key in item) {
+                    let text = '';
+                    if(selection.indexOf(key)>=0) {
+                        text+='<br/><br/><label>' + key+'</label>'
+                        text+='<input type="text" value="'+item[key]+'"/><br/>'
+                        labelsDiv.append($(text))
+                    }
+                }
+            }
+        }
+
+        function getValues() {
+            let selectedOpt = $('[name="mySelect"] option:selected')
+            let values = []
+            for(let op of selectedOpt) {
+                values.push($(op).val())
+            }
+            return values
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

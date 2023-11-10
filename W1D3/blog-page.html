@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    label{
+        margin-right: 10px;
+    }
+</style>
+<body>
+    <div style="display: flow-root;">
+        <div style="float: left;">
+            <div style="font-weight: bold;">
+                Bidhan Tech Blog
+            </div>
+            <div>
+                An Example Technology Blog
+            </div>
+        </div>
+        <div style="float: right; gap: 10px;">
+            <label>Home</label>
+            <label>Recent Post</label>
+            <label>Blog</label>
+        </div>
+    </div>
+    <div style="background-color: lightgray; gap: 10px; display: grid;grid-template-columns: 4fr 1fr; padding: 10px; border: 1px solid;">
+        <div style="background-color: white;">
+            <div>An example post</div>
+            <div>An example post</div>
+            <div style="display: flex; gap: 10px;">
+                <img src="images/img1.jpeg">
+                <div>
+                    <label for="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum vero maxime illo nam asperiores aliquam ipsa odio dolorem pariatur a cumque nemo et possimus, veniam non. Maiores facilis voluptatibus corrupti.</label>
+                    <div style="background-color: blue; color: white; padding: 5px; width: 100px;">Read More</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="background-color: white;">
+                Search
+                <div style="border-top: 3px solid black;"></div>
+                <div style="display: flex; gap: 10px; padding: 5px;">
+                    Search for
+                    <label style="border: 1px solid ; padding: 10px;">Search</label>
+                    <label style="background-color: lightblue ; padding: 10px;">Search</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

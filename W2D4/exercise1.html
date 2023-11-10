@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        let myString = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit exercitationem ullam laudantium repellat nisi nam iure porro quo suscipit fugit ipsum harum est, amet rem quos maiores delectus natus sed!"
+
+        window.onload = function() {
+            let i = 0
+            let interval = setInterval(function() {
+                if(i==myString.length)
+                    clearInterval(interval)
+                else {
+                    $('div').append(myString.charAt(i++))
+                }
+            },50)
+        }
+
+        function changeColor() {
+            $('div').css('color:red')
+        }
+        
+    </script>
+</head>
+<body>
+    <div onclick="changeColor()"></div>
+</body>
+</html>

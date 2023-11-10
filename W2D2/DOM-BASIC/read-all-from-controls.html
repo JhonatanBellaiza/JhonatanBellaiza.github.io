@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        function readValues() {
+            $('#valuesSelected').html('');
+            let inputId = $('#name');
+            $('#valuesSelected').append("<div> <b> Name: </>"+inputId.val()+"</div>");
+            
+            let gender = $("input[name='gender']:checked");
+            $('#valuesSelected').append("<div> <b>Gender: </b>"+gender.val()+"</div>");
+
+            let checkboxValue = $("input[name='skills']:checked");
+            let values=[];
+            checkboxValue.each(function(idx, ele) {
+                values.push($(ele).val());
+            });
+            $('#valuesSelected').append("<div> <b>Skills: </b>"+values+"</div>");
+            
+            let selectBox = $("select[name='singleselect'] option:selected");
+            $('#valuesSelected').append("<div><b>Country: </b>"+selectBox.val()+"</div>");
+
+            let selectBoxes = $("select[name='multiSelect'] option:selected");
+            let multiValues = [];
+            selectBoxes.each(function(idx, ele) {
+                multiValues.push($(ele).val());
+            });
+            $('#valuesSelected').append("<div><b>Random Options: </b>"+multiValues+"</div>");
+            
+            let textAreadId = $('#textareaId');
+            $('#valuesSelected').append("<div><b>Description: </b>"+textAreadId.val()+"</div>");
+        }
+    </script>
+</head>
+<body>
+    <div style="gap: 20px;display: grid;grid-template-columns: 150px auto;">
+        Name <input type="text" id="name"/>
+        Gender <div>
+            <input type="radio" name="gender" value="male" checked/> male
+            <input type="radio" name="gender" value="femlae"/> femla
+        </div>
+        Skills
+        <div>
+            <input type="checkbox" name="skills" value="java"/>java
+            <input type="checkbox" name="skills" value="javascript"/>javascript
+        </div>
+        Country
+        <select name="singleselect">
+            <option value="usa">United States of America</option>
+            <option value="ca">Canada</option>
+        </select>
+        Random Options
+        <select multiple name="multiSelect">
+            <option selected>Option 1</option>
+            <option selected>Option 2</option>
+        </select>
+        Description
+        <textarea name="" id="textareaId">Description</textarea>
+    </div>
+    <button onclick="readValues()">Submit</button>
+    <hr/>
+        <h5>Selected Values</h5>
+        <hr/>
+        <div id="valuesSelected"></div>
+</body>
+</html>

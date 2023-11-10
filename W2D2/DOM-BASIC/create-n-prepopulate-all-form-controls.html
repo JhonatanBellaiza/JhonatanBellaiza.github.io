@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(function() {
+            let myInputDiv = $("<div></div>");
+            myInputDiv.html("<label>Name</label>"+"<input type='text'/>")
+            $('body').append(myInputDiv);
+
+            let myTextArea = $("<div></div>");
+            myTextArea.html("<label>Description</label>"+
+                "<textarea>Description</textarea>");
+            $('body').append(myTextArea);
+
+            let mySelectDiv = $("<div></div>")
+            mySelectDiv.html('<label>Country</label>' +
+                '<select name="skills">'
+                + "<option value='java'>Java</option>"
+                + "<option value='javascript'>Javascript</option>"
+                + "<option value='pyhton'>Python</option>"
+                + "</select>");
+                $('body').append(mySelectDiv);
+
+            let multiSelectDiv = $("<div></div>");
+            multiSelectDiv.html("<label>Address</label>" +
+                "<select name='address' multiple>"
+                + "<option value='home'>Home</option>"
+                + "<option value='office'>office</option>"
+                + "<option value='work'>work</option>"
+                + "</select>")
+            $('body').append(multiSelectDiv);
+            
+            let myRadioDiv = $("<div></div>");
+            myRadioDiv.html("<label>Gender</label>" +
+             "<input type='radio' value='male' name='gender'/><label>Male</label>"
+            + "<input type='radio' value='female' name='female'/><label>Female</label>")
+            $('body').append(myRadioDiv);
+
+            let myCheckboxDiv = $("<div></div>");
+            myCheckboxDiv.html("<label>Skills</label>" +
+                "<input type='checkbox' value='Java'/><label>Java</label>"
+                + "<input type='checkbox' value='Javascript'/><label>Javascript</label>")
+            $('body').append(myCheckboxDiv);
+
+        })
+    </script>
+
+</head>
+<body>
+</body>
+</html>

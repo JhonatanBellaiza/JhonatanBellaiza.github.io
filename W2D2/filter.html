@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        let fruits = ['apple', 'grapes', 'banana', 'pear', 'arandanos', 'avocado'];
+        $('#myDiv1').ready(function() {
+            buildList(fruits)
+        });
+
+        function buildList(fruits) {
+
+            let mySelect = $("#myList");
+            if (mySelect.length == 0) {
+                mySelect = $("<select id='myList'></select>");
+                $("body").append(mySelect)
+            }
+            mySelect.html("")
+
+            for (let fruit of fruits) {
+                mySelect.append('<option>' + fruit + '</option>')
+            }
+        }
+
+        function filter() {
+            $('#myDiv1').append('<ol id="myOl"> Filter List</ol>')
+            fruits.filter(function(value) {
+                if(value.charAt(0) == "a") {
+                    let myUl = $('<li>' + value+'</li>');
+                $('#myOl').append(myUl)
+                }
+                
+            })
+        }
+
+
+    </script>
+</head>
+<body>
+    <div id="myDiv1"></div>
+    <button onclick="filter()">filter</button>
+    <div id="myDiv"></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    footer{
+        display: flex;
+        width: 80%;
+        background-color: black;
+        flex-direction: column;
+        padding: 50px 100px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.8fr;
+        row-gap: 10px;
+        column-gap: 30px;
+        color: white;
+        
+    }
+    .emailBox{
+        height: 40px;
+        width: 90%;
+        background-color: darkslategray;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 40px;
+    }
+    .imgMiddle{
+        width: 30px;
+        object-fit: contain;
+        margin-top: 15px;
+
+    }
+    .midColumn{
+        display: grid;
+        column-gap: 20px;
+        align-content: start;
+        grid-template-columns: 20px 1fr;
+        font-size: 14px;
+        font-style: italic;
+    }
+    .imgClass{
+        width: 40%;
+        object-fit: contain;
+    }
+    .lastColumn{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        align-content: flex-start;
+
+    }
+    .links{
+        color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+<body>
+    <footer>
+        <div class="container">
+            <p>About Me</p>
+            <p>Latest Tweet</p>
+            <p>Instagram</p>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eaque explicabo sit animi, reprehenderit rerum, itaque obcaecati perferendis pariatur repellendus ullam nam aperiam odit dolorum eius officia mollitia minus ducimus.
+                </p>
+                <p>
+                    <img src="images/img1.jpeg" style="width: 20px;"> 322323
+                </p>
+                <p>
+                    <img src="images/img1.jpeg" style="width: 20px;"> email.com
+                </p>
+                <div class="emailBox">
+                    <p style="padding: 0px 20px; line-height: 10px;">Enter your email</p>
+                    <div style="border-radius: 40px; background-color: brown;">
+                        <p style="padding: 0px 30px; line-height: 10px;">Send</p>
+                    </div>
+                </div>
+            </div>
+            <div class="midColumn">
+                <img src="images/img1.jpeg" class="imgMiddle">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia minima sunt sed dolor harum eos, iure nisi quae autem eum totam similique, labore, laudantium sapiente ipsa nemo. Error, unde provident!</p>
+                <img src="images/img1.jpeg" class="imgMiddle">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia minima sunt sed dolor harum eos, iure nisi quae autem eum totam similique, labore, laudantium sapiente ipsa nemo. Error, unde provident!</p>
+                <img src="images/img1.jpeg" class="imgMiddle">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia minima sunt sed dolor harum eos, iure nisi quae autem eum totam similique, labore, laudantium sapiente ipsa nemo. Error, unde provident!</p>
+            </div>
+            <div class="lastColumn">
+                <img src="images/img1.jpeg" class="imgClass">
+                <img src="images/img1.jpeg" class="imgClass">
+                <img src="images/img1.jpeg" class="imgClass">
+                <img src="images/img1.jpeg" class="imgClass">
+            </div>
+        </div>
+        <div style="border-top: 1px solid white;">&nbsp;</div>
+        <div class="links">
+            <div style="display: flex; gap: 20px;">
+                <label>Home</label>
+                <label>About</label>
+                <label>Our Work</label>
+                <label>Services</label>
+                <label>Blog</label>
+                <label>Contacts</label>
+            </div>
+            <div>
+                Colorlib
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

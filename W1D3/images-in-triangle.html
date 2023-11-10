@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .middle{
+        margin-top: 15px;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .footerOuter{
+        border: 1px solid green;
+        width: 80%;
+        height: 60px;
+        margin-top: 10px;
+        float: right;
+        font-size: 14px;
+    }
+    .footerIn{
+        border: 1px solid red;
+        margin: 2%;
+        height: 100%;
+        width: 90%;
+    }
+</style>
+<body>
+    <div style="width: 50%;text-align: center; margin: auto;">
+        <div>
+            <img src="images/img1.jpeg" >
+        </div>
+        <div>
+            <img src="images/img1.jpeg" ><img src="images/img1.jpeg" >
+        </div>
+        <div>
+            <img src="images/img1.jpeg" >
+            <img src="images/img1.jpeg" >
+            <img src="images/img1.jpeg" >
+        </div>
+    </div>
+    <div class="middle">
+        <div style="background-color: aquamarine;padding: 10px;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eos saepe deleniti ratione velit temporibus dolore nulla quaerat? Fuga labore eligendi illum nihil ut aperiam commodi voluptatem, laudantium rem vel?
+        </div>
+        <div style="background-color: antiquewhite;padding: 10px;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deserunt hic maiores obcaecati eaque sunt neque aliquid. Enim quia maxime, esse quod at dolorum facere. Numquam in exercitationem vitae temporibus!
+        </div>
+    </div>
+    <div class="footerOuter">
+        <div class="footerIn">
+            <div class="footerIn">
+                <div style="height: 100%; ">The End</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
